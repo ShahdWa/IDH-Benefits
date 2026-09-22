@@ -1,5 +1,6 @@
 import './globals.css';
 import { AuthProvider } from '../context/AuthContext';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: 'IDH Benefits | Exclusive perks for our team',
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         <AuthProvider>
           {children}
         </AuthProvider>
+        <Analytics />
       </body>
     </html>
   );
