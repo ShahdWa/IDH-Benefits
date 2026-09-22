@@ -91,7 +91,7 @@ export default function AuthModal({ isOpen, onClose, mode = 'login' }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#23161A]/60 backdrop-blur-md animate-fadeIn font-sans">
-      <div className="bg-white w-full max-w-[460px] rounded-[24px] p-6 sm:p-8 relative shadow-2xl border border-[#ECE1DE] transition-all">
+      <div className="bg-white w-full max-w-[460px] rounded-[24px] p-6 sm:p-8 relative shadow-2xl border border-[#ECE1DE] transition-all max-h-[90vh] overflow-y-auto">
         
         {/* Header Bar: Close */}
         <div className="flex items-center justify-end mb-4">

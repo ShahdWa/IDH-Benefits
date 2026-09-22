@@ -105,7 +105,7 @@ export default function BookingModal({ isOpen, onClose, selectedBenefit }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#23161A]/60 backdrop-blur-md animate-fadeIn">
-      <div className="bg-white w-full max-w-md rounded-[24px] border border-[#ECE1DE] shadow-2xl overflow-hidden relative">
+      <div className="bg-white w-full max-w-md rounded-[24px] border border-[#ECE1DE] shadow-2xl overflow-hidden relative max-h-[90vh] flex flex-col">
 
         {/* Modal Header */}
         <div className="p-5 border-b border-[#ECE1DE] bg-[#FAF5F3] flex items-center justify-between">
@@ -127,7 +127,7 @@ export default function BookingModal({ isOpen, onClose, selectedBenefit }) {
 
         {/* Modal Body */}
         {step === 1 ? (
-          <form onSubmit={handleSubmit} className="p-6 space-y-4 text-xs">
+          <form onSubmit={handleSubmit} className="p-6 space-y-4 text-xs overflow-y-auto">
 
             {/* Benefit Summary Card */}
             {selectedBenefit && (
@@ -279,7 +279,7 @@ export default function BookingModal({ isOpen, onClose, selectedBenefit }) {
           </form>
         ) : (
           /* SUCCESS VOUCHER GENERATED STATE */
-          <div className="p-6 text-center space-y-4 animate-scaleUp">
+          <div className="p-6 text-center space-y-4 animate-scaleUp overflow-y-auto">
 
             <div className="w-14 h-14 rounded-full bg-[#FCEEEE] text-[#A50D1A] flex items-center justify-center mx-auto shadow-sm">
               <CheckCircle2 className="w-8 h-8" />

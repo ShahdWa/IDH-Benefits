@@ -34,7 +34,7 @@ export default function ForgotPasswordPage() {
     <div className="min-h-screen bg-white flex flex-col md:flex-row font-sans selection:bg-[#FCEEEE] selection:text-[#A50D1A]">
       
       {/* LEFT PANEL - Crimson IDH Brand Showcase */}
-      <div className="md:w-1/2 bg-[#A50D1A] text-white p-8 md:p-14 flex flex-col justify-between relative overflow-hidden min-h-[400px] md:min-h-screen">
+      <div className="hidden md:flex md:w-1/2 bg-[#A50D1A] text-white p-8 md:p-14 flex-col justify-between relative overflow-hidden min-h-[400px] md:min-h-screen">
         
         {/* Background Decorative Rings */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/10 rounded-full pointer-events-none"></div>
@@ -83,13 +83,18 @@ export default function ForgotPasswordPage() {
       </div>
 
       {/* RIGHT PANEL - Recovery Steps */}
-      <div className="md:w-1/2 bg-white p-8 md:p-16 lg:p-20 flex flex-col justify-center items-center relative">
+      <div className="w-full md:w-1/2 bg-white p-6 sm:p-10 md:p-16 lg:p-20 flex flex-col justify-center items-center relative min-h-screen">
         
         {/* Navigation Shortcut */}
         <div className="w-full max-w-md flex justify-between items-center mb-8">
-          <Link href="/login" className="text-xs font-semibold text-zinc-500 hover:text-[#A50D1A] transition-colors">
-            ← Back to login
-          </Link>
+          <div className="flex items-center gap-3">
+            <Link href="/" className="md:hidden inline-block focus:outline-none">
+              <IdhLogo />
+            </Link>
+            <Link href="/login" className="text-xs font-semibold text-zinc-500 hover:text-[#A50D1A] transition-colors">
+              ← Back to login
+            </Link>
+          </div>
           
           <span className="text-xs font-bold text-[#A50D1A] bg-[#FCEEEE] px-3 py-1 rounded-full">
             Step {step > 3 ? 3 : step} of 3
