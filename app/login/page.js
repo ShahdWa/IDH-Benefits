@@ -31,10 +31,10 @@ export default function LoginPage() {
 
 
   return (
-    <div className="h-screen w-screen bg-white flex flex-col md:flex-row overflow-hidden font-sans selection:bg-[#FCEEEE] selection:text-[#A50D1A]">
+    <div className="min-h-screen md:h-screen w-screen bg-white flex flex-col md:flex-row overflow-y-auto md:overflow-hidden font-sans selection:bg-[#FCEEEE] selection:text-[#A50D1A]">
 
       {/* LEFT PANEL - Crimson IDH Brand Showcase (65% Width) */}
-      <div className="w-full md:w-[65%] lg:w-[65%] bg-[#A50D1A] text-white p-8 md:p-12 lg:p-16 flex flex-col justify-between relative overflow-hidden h-full">
+      <div className="hidden md:flex md:w-[65%] lg:w-[65%] bg-[#A50D1A] text-white p-8 md:p-12 lg:p-16 flex-col justify-between relative overflow-hidden h-full">
 
         {/* Background Decorative Rings */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] border border-white/10 rounded-full pointer-events-none"></div>
@@ -83,7 +83,7 @@ export default function LoginPage() {
       </div>
 
       {/* RIGHT PANEL - Login Form (35% Width) */}
-      <div className="w-full md:w-[35%] lg:w-[35%] bg-white p-6 sm:p-10 lg:p-12 flex flex-col justify-center items-center h-full relative overflow-hidden">
+      <div className="w-full md:w-[35%] lg:w-[35%] bg-white p-6 sm:p-10 lg:p-12 flex flex-col justify-center items-center min-h-screen md:h-full relative overflow-y-auto">
 
         <div className="w-full max-w-sm space-y-5">
 

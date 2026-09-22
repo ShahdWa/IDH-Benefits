@@ -42,10 +42,10 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <div className="h-screen w-screen bg-white flex flex-col md:flex-row overflow-hidden font-sans selection:bg-[#FCEEEE] selection:text-[#A50D1A]">
+    <div className="min-h-screen md:h-screen w-screen bg-white flex flex-col md:flex-row overflow-y-auto md:overflow-hidden font-sans selection:bg-[#FCEEEE] selection:text-[#A50D1A]">
 
       {/* LEFT PANEL */}
-      <div className="w-full md:w-[65%] bg-[#A50D1A] text-white p-8 md:p-12 lg:p-16 flex flex-col justify-between relative overflow-hidden h-full">
+      <div className="hidden md:flex md:w-[65%] bg-[#A50D1A] text-white p-8 md:p-12 lg:p-16 flex-col justify-between relative overflow-hidden h-full">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] border border-white/10 rounded-full pointer-events-none" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[950px] h-[950px] border border-white/5 rounded-full pointer-events-none" />
 
@@ -89,12 +89,15 @@ export default function AdminLoginPage() {
       </div>
 
       {/* RIGHT PANEL */}
-      <div className="w-full md:w-[35%] bg-white p-6 sm:p-10 lg:p-12 flex flex-col justify-center items-center h-full relative overflow-hidden">
+      <div className="w-full md:w-[35%] bg-white p-6 sm:p-10 lg:p-12 flex flex-col justify-center items-center min-h-screen md:h-full relative overflow-y-auto">
         <div className="w-full max-w-sm space-y-5">
 
           {/* Admin pill */}
-          <div className="flex justify-end mb-2">
-            <div className="bg-[#FAF5F3] p-1 rounded-full flex items-center border border-[#ECE1DE]">
+          <div className="flex items-center justify-between mb-2">
+            <Link href="/" className="md:hidden inline-block focus:outline-none">
+              <IdhLogo />
+            </Link>
+            <div className="bg-[#FAF5F3] p-1 rounded-full flex items-center border border-[#ECE1DE] ml-auto">
               <span className="px-5 py-1.5 rounded-full text-xs font-bold bg-white text-[#23161A] shadow-sm flex items-center gap-1.5">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 text-[#A50D1A]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
