@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --maroon: #6E0E17;
+  --red: #A50D1A;
+  --red-bright: #C81C29;
+  --blush: #D97E85;
+  --ink: #23161A;
+  --gray: #6B6B6B;
+  --paper: #FAF5F3;
+  --card: #FFFFFF;
+  --line: #ECE1DE;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.display {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+}
+
+/* Keyframes */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-rise {
+  animation: rise 0.6s ease forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-scaleUp {
+  animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #F6E4E5;
+  color: var(--maroon);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  opacity: 0;
+  animation: rise 0.6s ease forwards;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--red-bright);
+}
+
+/* Bento Card Custom Styling */
+.bento-card {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 28px 24px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, opacity .25s ease, filter .25s ease;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  animation: rise 0.5s ease forwards;
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -20px rgba(110,14,23,.35);
+  border-color: var(--blush);
+}
+
+.bento-card-icon {
+  position: relative;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #FCEEEE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--red);
+  margin-bottom: 14px;
+}
+
+.bento-card.feature .bento-card-icon {
+  background: rgba(255,255,255,.16);
+  color: white;
+}
+
+.bento-card.feature {
+  background: linear-gradient(120deg, var(--maroon), var(--red-bright));
+  color: white;
+  border: none;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.feature-arrow {
+  position: relative;
+  z-index: 1;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF5F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #D97E85;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A50D1A;
+}
+
+/* Enforce Brand Color on Forms & Controls (No Blue) */
+input, select, textarea, button {
+  accent-color: #A50D1A;
+}
+
+::selection {
+  background: #FCEEEE;
+  color: #A50D1A;
+}
+
+::-moz-selection {
+  background: #FCEEEE;
+  color: #A50D1A;
+}
+

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 80" width="340" height="80">
+  <!-- White Container -->
+  <rect width="168" height="80" rx="1.5" fill="#FFFFFF" />
+
+  <!-- Letter I -->
+  <rect x="14" y="12" width="16" height="56" fill="#000000" />
+
+  <!-- Letter D -->
+  <path d="M42 12H72C87.5 12 96 21 96 40C96 59 87.5 68 72 68H42V12ZM58 26V54H70C78 54 81 48.5 81 40C81 31.5 78 26 70 26H58Z" fill="#000000" />
+
+  <!-- Letter H -->
+  <path d="M108 12H123V32.5H139V12H154V68H139V47.5H123V68H108V12Z" fill="#000000" />
+
+  <!-- Vertical Divider Line -->
+  <line x1="184" y1="8" x2="184" y2="72" stroke="#FFFFFF" stroke-width="1.5" />
+
+  <!-- Stacked Text -->
+  <text x="198" y="26" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="300" fill="#FFFFFF" letter-spacing="2.2">INTEGRATED</text>
+  <text x="198" y="47" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="300" fill="#FFFFFF" letter-spacing="2.2">DIAGNOSTICS</text>
+  <text x="198" y="68" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="300" fill="#FFFFFF" letter-spacing="2.2">HOLDINGS</text>
+</svg>
