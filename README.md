@@ -179,8 +179,3 @@ Open your browser at: `http://localhost:3000`
   - Log in via `/admin/login` or change the account role to `admin` in the `profiles` table.
   - Full access to add, edit, and delete all platform content.
 
----
-
-## 📞 Support & Contact
-IDH Group — IT & Human Resources Department.  
-For any inquiries or technical support, please contact the Benefits Management Team.
